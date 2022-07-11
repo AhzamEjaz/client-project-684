@@ -1,0 +1,166 @@
+.navContainer {
+    display: flex;
+    justify-content: center;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background-color: rgba(11, 17, 76, 0);
+    border-bottom: 1px solid rgba(39, 56, 119, 0);
+    transition-duration: 0.3s;
+    transition-property: border-bottom-color, background-color;
+}
+
+.navContainer.scrolled {
+    background-color: #0b114c;
+    border-bottom-color: #273877;
+}
+
+.nav_btn{
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+.navLayout {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    grid-gap: 1em;
+    gap: 1em;
+    max-width: 113em;
+    padding: calc(env(safe-area-inset-top) + 1em) 4em 1em;
+    background-color: #0b114c;
+    border-bottom: 1px solid #273877;
+}
+
+@media (max-width: 1300px) {
+    .navLayout {
+        padding: calc(env(safe-area-inset-top) + 1em) 1em 1em;
+    }
+}
+
+@media (max-width: 1099px) {
+    .navLayout {
+        padding-right: 4.3em;
+    }
+}
+
+@media (min-width: 1201px) {
+    .navLayout {
+        grid-gap: 2.4em;
+        gap: 2.4em;
+    }
+}
+
+@media (max-width: 450px) {
+    .navLayout {
+        padding: calc(env(safe-area-inset-top) + 0.5em) 0.5em 0.5em;
+    }
+}
+
+.navLayout-brand {
+    flex-shrink: 0;
+    margin-right: auto;
+}
+
+@media (max-width: 1099px) {
+    :root .navLayout-links {
+        display: none;
+    }
+}
+
+.navLayout-controls {
+    flex-shrink: 0;
+    display: flex;
+    grid-gap: 0.61em;
+    gap: 0.61em;
+}
+
+@media (max-width: 550px) {
+    .navLayout-controls {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 19;
+        border-top: 1px solid #273877;
+        width: 100%;
+        padding: 0.5em 0.5em calc(env(safe-area-inset-bottom) + 0.5em);
+        justify-content: flex-start;
+        background-color: var(--global-background);
+    }
+}
+
+.navLayout-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+@media (min-width: 1100px) {
+    .navLayout-drawer {
+        display: none;
+    }
+}
+
+@media (min-width: 451px) {
+    .navLayout-drawer {
+        top: 0.25em;
+    }
+}
+
+.logo {
+    display: block;
+    width: auto;
+    height: 33px;
+}
+
+@media (min-width: 1100px) and (max-width: 1200px) {
+    .logo {
+        height: 25px;
+    }
+}
+
+@media (max-width: 450px) {
+    .logo {
+        height: 25px;
+    }
+}
+
+:root .networkButton .icon,
+:root .vipButton .icon {
+    margin-right: 0.75em;
+}
+
+@media screen and (max-width: 768px) {
+    .networkButton {
+        display: none;
+    }
+}
+
+@media print,
+screen and (min-width: 769px) {
+    .networkButtonShort {
+        display: none;
+    }
+}
+
+@media print,
+screen and (min-width: 769px) {
+    .profileButton {
+        padding-right: 0.3em;
+    }
+}
+
+.profileButton-address {
+    display: inline-block;
+    margin-left: 0.5em;
+    border-radius: 0.38em;
+    padding: 0.25em 0.76em;
+    background-color: rgba(0, 166, 255, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+    .profileButton-address {
+        display: none;
+    }
+}
